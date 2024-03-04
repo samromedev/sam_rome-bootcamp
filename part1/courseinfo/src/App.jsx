@@ -4,12 +4,10 @@ const App = () => {
       <h1>Half Stack Application Development</h1>
     )
   }
-  const Content = (count) => {
+  const Part = (part) => {
     return (
       <>
-        <h2>Fundamentals of React, Exercises {count.value1}</h2>
-        <h2>Using Props to pass data, Exercises {count.value2}</h2>
-        <h2>State of a Component, Exercises {count.value3}</h2>
+      <h2>{part.name} , {part.number}</h2>
       </>
     )
   }
@@ -22,8 +20,10 @@ const App = () => {
   }
   return (
     <>
-      <Header />
-      <Content value1 = {10} value2 = {7} value3 = {14}/>
+      <Header/>
+      <Part name = 'Fundamentals of React'  number = '10' />
+      <Part name = 'Using props to pass data' number = '7' />
+      <Part name = 'State of a component' number = '14' />
       <Total />
     </>
   )
